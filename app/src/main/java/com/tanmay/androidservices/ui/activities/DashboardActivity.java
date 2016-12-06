@@ -1,4 +1,4 @@
-package com.tanmay.androidservices.views.activities;
+package com.tanmay.androidservices.ui.activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,12 +11,12 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.tanmay.androidservices.R;
-import com.tanmay.androidservices.views.interfaces.OnListItemClickListener;
-import com.tanmay.androidservices.views.adapters.DashboardAdapter;
+import com.tanmay.androidservices.adapters.DashboardAdapter;
+import com.tanmay.androidservices.interfaces.OnListItemClickListener;
 
 import java.util.ArrayList;
 
-public class DashboardActivity extends AppCompatActivity implements OnListItemClickListener{
+public class DashboardActivity extends AppCompatActivity implements OnListItemClickListener {
 
     public static String TAG = "DashboardActivity";
 
@@ -40,8 +40,7 @@ public class DashboardActivity extends AppCompatActivity implements OnListItemCl
         initView();
         setSupportActionBar(toolbar);
 
-        itemList = new ArrayList<>();
-        itemList.add("Set/Remove Multiple Alarms");
+        itemList = getContentList();
 
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(this);
@@ -63,9 +62,20 @@ public class DashboardActivity extends AppCompatActivity implements OnListItemCl
             case 0:
                 startActivity(new Intent(context, ManageAlarms.class));
                 break;
+            case 1:
+                startActivity(new Intent(context, LocationTracking.class));
+                break;
             default:
-                startActivity(new Intent(context, ManageAlarms.class));
                 Toast.makeText(context, "To be done!", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public ArrayList<String> getContentList() {
+        ArrayList<String> contentList = new ArrayList<>();
+
+        contentList.add("Set/Remove Multiple Alarms");
+        contentList.add("Device Location Tracking");
+
+        return contentList;
     }
 }

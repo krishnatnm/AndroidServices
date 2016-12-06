@@ -12,7 +12,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.NotificationCompat;
 
 import com.tanmay.androidservices.R;
-import com.tanmay.androidservices.views.activities.ManageAlarms;
+import com.tanmay.androidservices.ui.activities.ManageAlarms;
 
 /**
  * Created by TaNMay on 19/06/16.

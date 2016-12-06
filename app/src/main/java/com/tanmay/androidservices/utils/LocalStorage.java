@@ -53,4 +53,18 @@ public class LocalStorage {
             return 0;
         }
     }
+
+    public void setTrackingInfo(String trackingInfo) {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("TRACKING_INFO", trackingInfo);
+        editor.commit();
+    }
+
+    public String getTrackingInfo() {
+        if (sharedPreferences.contains("TRACKING_INFO")) {
+            return sharedPreferences.getString("TRACKING_INFO", null);
+        } else {
+            return null;
+        }
+    }
 }

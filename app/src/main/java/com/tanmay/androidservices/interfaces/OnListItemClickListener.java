@@ -1,4 +1,4 @@
-package com.tanmay.androidservices.views.interfaces;
+package com.tanmay.androidservices.interfaces;
 
 import android.view.View;
 

@@ -1,4 +1,4 @@
-package com.tanmay.androidservices.views.models;
+package com.tanmay.androidservices.models;
 
 /**
  * Created by TaNMay on 20/06/16.

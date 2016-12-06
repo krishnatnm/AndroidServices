@@ -1,4 +1,4 @@
-package com.tanmay.androidservices.views.adapters;
+package com.tanmay.androidservices.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.tanmay.androidservices.R;
-import com.tanmay.androidservices.views.interfaces.OnListItemClickListener;
+import com.tanmay.androidservices.interfaces.OnListItemClickListener;
 
 import java.util.ArrayList;
 

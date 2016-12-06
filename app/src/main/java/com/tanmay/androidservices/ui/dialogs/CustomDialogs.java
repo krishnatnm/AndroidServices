@@ -1,4 +1,4 @@
-package com.tanmay.androidservices.views.dialogs;
+package com.tanmay.androidservices.ui.dialogs;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -9,15 +9,7 @@ import android.widget.TimePicker;
 
 import com.tanmay.androidservices.R;
 import com.tanmay.androidservices.utils.LocalStorage;
-import com.tanmay.androidservices.views.interfaces.OnDialogButtonClickListener;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
+import com.tanmay.androidservices.interfaces.OnDialogButtonClickListener;
 
 /**
  * Created by TaNMay on 20/06/16.

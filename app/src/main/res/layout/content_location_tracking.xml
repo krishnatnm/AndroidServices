@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/entire_layout"
+    android:paddingBottom="@dimen/activity_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.tanmay.androidservices.ui.activities.LocationTracking"
+    tools:showIn="@layout/activity_location_tracking">
+
+    <LinearLayout
+        android:id="@+id/button_sec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/activity_margin"
+        android:weightSum="100">
+
+        <Button
+            android:id="@+id/start_tracking"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="45"
+            android:enabled="false"
+            android:onClick="startTracking"
+            android:text="Start tracking!" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="10" />
+
+        <Button
+            android:id="@+id/stop_tracking"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="45"
+            android:enabled="false"
+            android:onClick="stopTracking"
+            android:text="Stop tracking!" />
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/button_sec" />
+
+</RelativeLayout>

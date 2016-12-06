@@ -1,4 +1,4 @@
-package com.tanmay.androidservices.views.activities;
+package com.tanmay.androidservices.ui.activities;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -16,11 +16,11 @@ import android.widget.TextView;
 import com.tanmay.androidservices.R;
 import com.tanmay.androidservices.services.NotificationService;
 import com.tanmay.androidservices.utils.LocalStorage;
-import com.tanmay.androidservices.views.adapters.AlarmsAdapter;
-import com.tanmay.androidservices.views.dialogs.CustomDialogs;
-import com.tanmay.androidservices.views.interfaces.OnAlarmItemClickListener;
-import com.tanmay.androidservices.views.interfaces.OnDialogButtonClickListener;
-import com.tanmay.androidservices.views.models.AlarmItem;
+import com.tanmay.androidservices.adapters.AlarmsAdapter;
+import com.tanmay.androidservices.ui.dialogs.CustomDialogs;
+import com.tanmay.androidservices.interfaces.OnAlarmItemClickListener;
+import com.tanmay.androidservices.interfaces.OnDialogButtonClickListener;
+import com.tanmay.androidservices.models.AlarmItem;
 
 import org.json.JSONArray;
 import org.json.JSONException;
